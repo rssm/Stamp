@@ -13,6 +13,7 @@
 		3FEDA80C211B286F008F3C1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA80A211B286F008F3C1E /* Main.storyboard */; };
 		3FEDA80E211B2871008F3C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA80D211B2871008F3C1E /* Assets.xcassets */; };
 		3FEDA811211B2871008F3C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA80F211B2871008F3C1E /* LaunchScreen.storyboard */; };
+		3FEDA819211B3086008F3C1E /* Passport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA818211B3086008F3C1E /* Passport.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3FEDA80D211B2871008F3C1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FEDA810211B2871008F3C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FEDA812211B2871008F3C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FEDA818211B3086008F3C1E /* Passport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Passport.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,24 @@
 		3FEDA803211B286F008F3C1E /* Stamp */ = {
 			isa = PBXGroup;
 			children = (
+				3FEDA81A211B308F008F3C1E /* View */,
 				3FEDA804211B286F008F3C1E /* AppDelegate.swift */,
 				3FEDA806211B286F008F3C1E /* art.scnassets */,
 				3FEDA808211B286F008F3C1E /* ViewController.swift */,
-				3FEDA80A211B286F008F3C1E /* Main.storyboard */,
 				3FEDA80D211B2871008F3C1E /* Assets.xcassets */,
-				3FEDA80F211B2871008F3C1E /* LaunchScreen.storyboard */,
 				3FEDA812211B2871008F3C1E /* Info.plist */,
 			);
 			path = Stamp;
+			sourceTree = "<group>";
+		};
+		3FEDA81A211B308F008F3C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDA80A211B286F008F3C1E /* Main.storyboard */,
+				3FEDA818211B3086008F3C1E /* Passport.storyboard */,
+				3FEDA80F211B2871008F3C1E /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +138,7 @@
 			files = (
 				3FEDA807211B286F008F3C1E /* art.scnassets in Resources */,
 				3FEDA811211B2871008F3C1E /* LaunchScreen.storyboard in Resources */,
+				3FEDA819211B3086008F3C1E /* Passport.storyboard in Resources */,
 				3FEDA80E211B2871008F3C1E /* Assets.xcassets in Resources */,
 				3FEDA80C211B286F008F3C1E /* Main.storyboard in Resources */,
 			);
@@ -285,7 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3B3UPXANB7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,7 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3B3UPXANB7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F76E0DC211DD6AA00F4E369 /* StampView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F76E0DB211DD6AA00F4E369 /* StampView.xib */; };
 		3FEDA805211B286F008F3C1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDA804211B286F008F3C1E /* AppDelegate.swift */; };
 		3FEDA807211B286F008F3C1E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA806211B286F008F3C1E /* art.scnassets */; };
 		3FEDA809211B286F008F3C1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDA808211B286F008F3C1E /* ViewController.swift */; };
@@ -14,9 +15,12 @@
 		3FEDA80E211B2871008F3C1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA80D211B2871008F3C1E /* Assets.xcassets */; };
 		3FEDA811211B2871008F3C1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA80F211B2871008F3C1E /* LaunchScreen.storyboard */; };
 		3FEDA819211B3086008F3C1E /* Passport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FEDA818211B3086008F3C1E /* Passport.storyboard */; };
+		3FEDA81C211B57C6008F3C1E /* PassportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDA81B211B57C6008F3C1E /* PassportView.swift */; };
+		3FEDA81E211C6D46008F3C1E /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDA81D211C6D46008F3C1E /* StampView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F76E0DB211DD6AA00F4E369 /* StampView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StampView.xib; sourceTree = "<group>"; };
 		3FEDA801211B286F008F3C1E /* Stamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FEDA804211B286F008F3C1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FEDA806211B286F008F3C1E /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		3FEDA810211B2871008F3C1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FEDA812211B2871008F3C1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FEDA818211B3086008F3C1E /* Passport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Passport.storyboard; sourceTree = "<group>"; };
+		3FEDA81B211B57C6008F3C1E /* PassportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportView.swift; sourceTree = "<group>"; };
+		3FEDA81D211C6D46008F3C1E /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F76E0DD211DD6C200F4E369 /* StampView */ = {
+			isa = PBXGroup;
+			children = (
+				3F76E0DB211DD6AA00F4E369 /* StampView.xib */,
+				3FEDA81D211C6D46008F3C1E /* StampView.swift */,
+			);
+			path = StampView;
+			sourceTree = "<group>";
+		};
 		3FEDA7F8211B286F008F3C1E = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +75,7 @@
 			children = (
 				3FEDA81A211B308F008F3C1E /* View */,
 				3FEDA804211B286F008F3C1E /* AppDelegate.swift */,
+				3FEDA81B211B57C6008F3C1E /* PassportView.swift */,
 				3FEDA806211B286F008F3C1E /* art.scnassets */,
 				3FEDA808211B286F008F3C1E /* ViewController.swift */,
 				3FEDA80D211B2871008F3C1E /* Assets.xcassets */,
@@ -71,6 +87,7 @@
 		3FEDA81A211B308F008F3C1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F76E0DD211DD6C200F4E369 /* StampView */,
 				3FEDA80A211B286F008F3C1E /* Main.storyboard */,
 				3FEDA818211B3086008F3C1E /* Passport.storyboard */,
 				3FEDA80F211B2871008F3C1E /* LaunchScreen.storyboard */,
@@ -136,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F76E0DC211DD6AA00F4E369 /* StampView.xib in Resources */,
 				3FEDA807211B286F008F3C1E /* art.scnassets in Resources */,
 				3FEDA811211B2871008F3C1E /* LaunchScreen.storyboard in Resources */,
 				3FEDA819211B3086008F3C1E /* Passport.storyboard in Resources */,
@@ -152,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FEDA809211B286F008F3C1E /* ViewController.swift in Sources */,
+				3FEDA81C211B57C6008F3C1E /* PassportView.swift in Sources */,
+				3FEDA81E211C6D46008F3C1E /* StampView.swift in Sources */,
 				3FEDA805211B286F008F3C1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

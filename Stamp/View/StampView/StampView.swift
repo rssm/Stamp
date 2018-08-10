@@ -22,13 +22,39 @@ class StampView : UIView {
     
     fileprivate var contentView : UIView?
     
-    fileprivate func loadViewFromXib() -> UIView! {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupXib()
+    }
+    
+    
+    /// Instancia a view definida no arquivo xib usando o mesmo nome da classe
+    ///
+    /// - Returns: a primeira view encontrada na xib ou nil se não achar nada.
+    fileprivate func loadViewFromXib() -> UIView? {
         let bundle = Bundle(for: type(of: self))
         let xib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
         let view = xib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
     }
+    
+    
+    func setupXib(){
+        
+        contentView = loadViewFromXib()
+        
+        guard contentView != nil else {
+            fatalError("Can't load the view from \(String(describing: type(of: self))).xib")
+        }
+        
+        contentView?.backgroundColor = UIColor.clear
+        contentView?.frame = bounds
+        contentView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
+        addSubview(contentView!)
+    }
+    
     
     override func draw(_ rect: CGRect) {
         

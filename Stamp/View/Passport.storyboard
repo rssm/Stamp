@@ -9,37 +9,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Passport View Controller-->
         <scene sceneID="pEX-mv-vA6">
             <objects>
-                <viewController id="ZyZ-O2-kss" sceneMemberID="viewController">
+                <viewController id="ZyZ-O2-kss" customClass="PassportViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXC-5r-kde">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONx-gn-Vld" customClass="PassportView" customModule="Stamp" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pSM-pb-ezq">
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="dGd-ke-n20" appends="YES" id="A4k-0t-r1F"/>
-                                </connections>
-                            </view>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ONx-gn-Vld" firstAttribute="centerY" secondItem="g0g-Ot-gOw" secondAttribute="centerY" id="IYU-KU-6UC"/>
-                            <constraint firstItem="ONx-gn-Vld" firstAttribute="width" secondItem="nXC-5r-kde" secondAttribute="width" id="L91-BF-N1y"/>
-                            <constraint firstItem="ONx-gn-Vld" firstAttribute="height" secondItem="nXC-5r-kde" secondAttribute="height" id="kn8-Ah-mj9"/>
-                            <constraint firstItem="ONx-gn-Vld" firstAttribute="centerX" secondItem="g0g-Ot-gOw" secondAttribute="centerX" id="t3a-55-VTP"/>
+                            <constraint firstItem="pSM-pb-ezq" firstAttribute="height" secondItem="nXC-5r-kde" secondAttribute="height" id="JxC-fA-8eP"/>
+                            <constraint firstItem="pSM-pb-ezq" firstAttribute="width" secondItem="nXC-5r-kde" secondAttribute="width" id="UyD-rw-gd5"/>
+                            <constraint firstItem="pSM-pb-ezq" firstAttribute="centerY" secondItem="g0g-Ot-gOw" secondAttribute="centerY" id="hSh-2X-Nqn"/>
+                            <constraint firstItem="pSM-pb-ezq" firstAttribute="centerX" secondItem="g0g-Ot-gOw" secondAttribute="centerX" id="hZf-QU-R7u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g0g-Ot-gOw"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundPageImageView" destination="pSM-pb-ezq" id="Lcv-F5-6GC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYF-IB-aUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="dGd-ke-n20"/>
+                <tapGestureRecognizer id="dGd-ke-n20">
+                    <connections>
+                        <action selector="tap:" destination="ZyZ-O2-kss" id="JnK-Ad-fbk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="69" y="70"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="308" height="428"/>
+    </resources>
 </document>

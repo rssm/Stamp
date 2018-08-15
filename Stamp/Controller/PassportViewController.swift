@@ -25,12 +25,23 @@ class PassportViewController: UIViewController {
     @IBOutlet weak var backgroundPageImageView: UIImageView!
     
 //    ainda nao sei... hahaha
+//    adicionar os caras aí e remover quando der um novo clique. SHOWZERA
     var stampViews = [UIView]()
     
+    var enableStampBool : Bool = false
+    
+    var addButtonItem : UIBarButtonItem?
+    var doneButtonItem: UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.addButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(enableStamp))
+        
+        self.doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(desenableStamp))
+        
+        self.navigationItem.rightBarButtonItem = self.addButtonItem
+        
         let date = Date()
         let formater = DateFormatter()
         
@@ -51,15 +62,17 @@ class PassportViewController: UIViewController {
 
 //   recebe um clique na tela, pega a posição do mesmo e adiciona o centro do carimbo na posição
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let position = touch.location(in: self.view)
-            
-            let stampView = StampView()
-            
-            stampView.center = position
-            stampView.setLabelTexts(city: self.city, country: self.country, date: self.stringDate!)
-            
-            self.view.addSubview(stampView)
+        if self.enableStampBool{
+            if let touch = touches.first {
+                let position = touch.location(in: self.view)
+                
+                let stampView = StampView()
+                
+                stampView.center = position
+                stampView.setLabelTexts(city: self.city, country: self.country, date: self.stringDate!)
+                
+                self.view.addSubview(stampView)
+            }
         }
     }
 
@@ -97,5 +110,18 @@ extension PassportViewController : CLLocationManagerDelegate{
         
     }
     
+    @objc func enableStamp(){
+        self.startLocationManager()
+        self.enableStampBool = !self.enableStampBool
+        self.navigationItem.rightBarButtonItem = self.doneButtonItem
+
+    }
+    
+    @objc func desenableStamp(){
+        self.stopLocationManager()
+        self.enableStampBool = !self.enableStampBool
+        self.navigationItem.rightBarButtonItem = self.addButtonItem
+
+    }
     
 }

@@ -29,6 +29,7 @@ class PassportViewController: UIViewController {
     var stampViews = [UIView]()
     
     var enableStampBool : Bool = false
+    var firstStampBool : Bool = true
     
     var addButtonItem : UIBarButtonItem?
     var doneButtonItem: UIBarButtonItem?
@@ -66,12 +67,19 @@ class PassportViewController: UIViewController {
             if let touch = touches.first {
                 let position = touch.location(in: self.view)
                 
+//                preenche os dados do carimbo
                 let stampView = StampView()
-                
                 stampView.center = position
                 stampView.setLabelTexts(city: self.city, country: self.country, date: self.stringDate!)
                 
+//                verifica se não esta reposicionando.
+                if !self.firstStampBool{
+                    self.stampViews.popLast()?.removeFromSuperview()
+                }
+//                adiciona o carimbo a tela.
+                self.stampViews.append(stampView)
                 self.view.addSubview(stampView)
+                self.firstStampBool = false
             }
         }
     }
@@ -110,13 +118,15 @@ extension PassportViewController : CLLocationManagerDelegate{
         
     }
     
+//    ativa a atualização da localização, autoriza carimbar, muda o buttonItem e faz a lógica do carimbo.
     @objc func enableStamp(){
         self.startLocationManager()
         self.enableStampBool = !self.enableStampBool
         self.navigationItem.rightBarButtonItem = self.doneButtonItem
-
+        self.firstStampBool = true
     }
     
+    //    desativa a atualização da localização, desautoriza carimbar, muda o buttonItem e faz a lógica do carimbo.
     @objc func desenableStamp(){
         self.stopLocationManager()
         self.enableStampBool = !self.enableStampBool

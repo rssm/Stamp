@@ -1,68 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StampView" customModule="Stamp" customModuleProvider="target">
             <connections>
                 <outlet property="cityLabel" destination="5Rd-Kq-64I" id="HZ9-gH-AoT"/>
+                <outlet property="contentView" destination="7iL-Ra-Xre" id="X66-a3-P1A"/>
                 <outlet property="countryLabel" destination="039-ga-x9C" id="8q8-cY-Tme"/>
                 <outlet property="dataLabel" destination="1ax-1i-AH3" id="l3p-2T-TDw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clipsSubviews="YES" contentMode="scaleToFill" id="7iL-Ra-Xre">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="7iL-Ra-Xre" userLabel="Content View">
+            <rect key="frame" x="0.0" y="0.0" width="192" height="72"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rd-Kq-64I">
-                    <rect key="frame" x="115" y="18" width="145" height="40"/>
-                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                    <rect key="frame" x="60" y="8" width="72.5" height="20"/>
+                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0T2-ac-ny3">
-                    <rect key="frame" x="37.5" y="59" width="300" height="1"/>
+                    <rect key="frame" x="21" y="29" width="150" height="1"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="LJd-rb-UdG"/>
-                        <constraint firstAttribute="width" constant="300" id="Lau-iu-rTK"/>
+                        <constraint firstAttribute="width" constant="150" id="Lau-iu-rTK"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATA/DATA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-1i-AH3">
-                    <rect key="frame" x="143.5" y="74" width="88" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="71" y="35" width="50" height="11"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="039-ga-x9C">
-                    <rect key="frame" x="171" y="103" width="32" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="88" y="51" width="16.5" height="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="5Rd-Kq-64I" firstAttribute="top" secondItem="7iL-Ra-Xre" secondAttribute="top" constant="18" id="BDZ-QZ-sVT"/>
+                <constraint firstItem="5Rd-Kq-64I" firstAttribute="top" secondItem="7iL-Ra-Xre" secondAttribute="top" constant="8" id="BDZ-QZ-sVT"/>
                 <constraint firstItem="5Rd-Kq-64I" firstAttribute="centerX" secondItem="7iL-Ra-Xre" secondAttribute="centerX" id="LnF-mg-7sn"/>
-                <constraint firstItem="039-ga-x9C" firstAttribute="top" secondItem="0T2-ac-ny3" secondAttribute="bottom" constant="43" id="Wwa-5N-Y5c"/>
+                <constraint firstItem="039-ga-x9C" firstAttribute="top" secondItem="1ax-1i-AH3" secondAttribute="bottom" constant="5" id="Qa5-gX-ijA"/>
                 <constraint firstItem="039-ga-x9C" firstAttribute="centerX" secondItem="7iL-Ra-Xre" secondAttribute="centerX" id="cxY-jh-hEe"/>
                 <constraint firstItem="0T2-ac-ny3" firstAttribute="top" secondItem="5Rd-Kq-64I" secondAttribute="bottom" constant="1" id="irR-21-WuT"/>
                 <constraint firstItem="1ax-1i-AH3" firstAttribute="centerX" secondItem="7iL-Ra-Xre" secondAttribute="centerX" id="lWq-hA-0ai"/>
                 <constraint firstItem="0T2-ac-ny3" firstAttribute="centerX" secondItem="7iL-Ra-Xre" secondAttribute="centerX" id="nB0-N0-VvA"/>
-                <constraint firstItem="1ax-1i-AH3" firstAttribute="top" secondItem="0T2-ac-ny3" secondAttribute="bottom" constant="14" id="x1z-BC-llS"/>
+                <constraint firstItem="1ax-1i-AH3" firstAttribute="top" secondItem="0T2-ac-ny3" secondAttribute="bottom" constant="5" id="x1z-BC-llS"/>
             </constraints>
-            <nil key="simulatedTopBarMetrics"/>
-            <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-90.5" y="-333"/>
+            <point key="canvasLocation" x="-91" y="-311"/>
         </view>
     </objects>
 </document>

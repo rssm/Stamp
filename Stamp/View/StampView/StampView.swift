@@ -12,68 +12,34 @@ import UIKit
 class StampView : UIView {
     
 //    Dados a serem escritos no carimbo, em uma label. São dados default caso não consiga recuperar algum deles.
-    var location : String = "Somewhere"
-    var date = "01/01/2001"
-    var name = "BATMAN"
-    
+
+    @IBOutlet var contentView: UIView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     
-    fileprivate var contentView : UIView?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupXib()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
     
-    
-    /// Instancia a view definida no arquivo xib usando o mesmo nome da classe
-    ///
-    /// - Returns: a primeira view encontrada na xib ou nil se não achar nada.
-    fileprivate func loadViewFromXib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
-        let xib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
-        let view = xib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        
-        return view
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
     }
-    
-    
-    func setupXib(){
-        
-        contentView = loadViewFromXib()
-        
-        guard contentView != nil else {
-            fatalError("Can't load the view from \(String(describing: type(of: self))).xib")
-        }
-        
-        contentView?.backgroundColor = UIColor.clear
-        contentView?.frame = bounds
-        contentView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-        addSubview(contentView!)
+    private func commonInit(){
+        Bundle.main.loadNibNamed("StampView", owner: self, options: nil)
+        addSubview(contentView)
+        self.contentView.backgroundColor = UIColor.clear
+        contentView.frame = CGRect(x: -96, y: -36, width: 192, height: 72)
     }
     
-    
-    override func draw(_ rect: CGRect) {
-        
-        let context:CGContext! = UIGraphicsGetCurrentContext()
-        
-        let path = UIBezierPath(roundedRect: rect, cornerRadius: 10.0)
-        
-        // Modifica a área de desenho do contexto atual deixando desenhável
-        // apenas a área definida pelo path
-        path.addClip()
-        
-        self.layer.borderWidth = 5.0
-        self.layer.borderColor = UIColor.black.cgColor
-        
-        context.saveGState()
-        
-        context.setShouldAntialias(true)
-        
+//    recebe os dados a serem preenchidos nas labels
+    func setLabelTexts(city:String, country:String, date:String){
+        self.cityLabel.text = city
+        self.dataLabel.text = date
+        self.countryLabel.text = country
     }
-    
-    
 }

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGe-ca-2GB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hnr-ik-Kcj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,45 +25,46 @@
             </objects>
             <point key="canvasLocation" x="41" y="99"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="tgi-aC-H5x">
+        <!--Passport View Controller-->
+        <scene sceneID="en5-f1-kfR">
             <objects>
-                <viewController id="DGe-ca-2GB" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TN6-BQ-67Z">
+                <viewController id="Hnr-ik-Kcj" customClass="PassportViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ls-Mh-MHe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPT-XO-6eM" customClass="PassportView" customModule="Stamp" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vPV-4e-6Uc">
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ENB-ir-qN7" appends="YES" id="wfT-dV-teA"/>
+                                    <outletCollection property="gestureRecognizers" destination="nnz-Ir-UpD" appends="YES" id="f1X-kR-55y"/>
                                 </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GqP-gF-qAg" customClass="StampView" customModule="Stamp" customModuleProvider="target">
-                                <rect key="frame" x="100" y="300" width="175" height="87"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GqP-gF-qAg" firstAttribute="centerX" secondItem="zPT-XO-6eM" secondAttribute="centerX" id="5Dt-oQ-8lV"/>
-                            <constraint firstItem="zPT-XO-6eM" firstAttribute="height" secondItem="TN6-BQ-67Z" secondAttribute="height" id="V67-P5-8sp"/>
-                            <constraint firstItem="GqP-gF-qAg" firstAttribute="centerY" secondItem="zPT-XO-6eM" secondAttribute="centerY" id="XK7-Sq-LSg"/>
-                            <constraint firstItem="zPT-XO-6eM" firstAttribute="centerX" secondItem="bPS-WK-Kxk" secondAttribute="centerX" id="fdt-Zz-ItJ"/>
-                            <constraint firstItem="zPT-XO-6eM" firstAttribute="centerY" secondItem="bPS-WK-Kxk" secondAttribute="centerY" id="juu-CP-82q"/>
-                            <constraint firstItem="zPT-XO-6eM" firstAttribute="width" secondItem="TN6-BQ-67Z" secondAttribute="width" id="tag-50-DrM"/>
-                            <constraint firstItem="GqP-gF-qAg" firstAttribute="top" secondItem="TN6-BQ-67Z" secondAttribute="top" constant="300" id="vIZ-5h-Qem"/>
-                            <constraint firstItem="GqP-gF-qAg" firstAttribute="leading" secondItem="bPS-WK-Kxk" secondAttribute="leading" constant="100" id="whM-dU-Zjd"/>
+                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="height" secondItem="4ls-Mh-MHe" secondAttribute="height" id="7bP-dC-jPE"/>
+                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="centerX" secondItem="a27-R8-A41" secondAttribute="centerX" id="asu-RS-En9"/>
+                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="centerY" secondItem="a27-R8-A41" secondAttribute="centerY" id="fgC-Uv-Jr5"/>
+                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="width" secondItem="4ls-Mh-MHe" secondAttribute="width" id="tiW-bj-umE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bPS-WK-Kxk"/>
+                        <viewLayoutGuide key="safeArea" id="a27-R8-A41"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundPageImageView" destination="vPV-4e-6Uc" id="HNY-q8-NV2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6vc-Ba-35M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="ENB-ir-qN7"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDI-bh-hcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nnz-Ir-UpD">
+                    <connections>
+                        <action selector="tap:" destination="Hnr-ik-Kcj" id="Dbk-sZ-nGy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1030" y="99"/>
+            <point key="canvasLocation" x="910" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="308" height="428"/>
+    </resources>
 </document>

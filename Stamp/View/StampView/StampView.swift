@@ -34,6 +34,11 @@ class StampView : UIView {
         addSubview(contentView)
         self.contentView.backgroundColor = UIColor.clear
         contentView.frame = CGRect(x: -96, y: -36, width: 192, height: 72)
+        
+        contentView.layer.cornerRadius = 10
+        contentView.layer.borderWidth = 3
+        contentView.layer.borderColor = UIColor.black.cgColor
+        
     }
     
 //    recebe os dados a serem preenchidos nas labels

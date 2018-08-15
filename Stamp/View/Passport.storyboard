@@ -12,7 +12,7 @@
         <!--Passport View Controller-->
         <scene sceneID="pEX-mv-vA6">
             <objects>
-                <viewController id="ZyZ-O2-kss" customClass="PassportViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="passport" id="ZyZ-O2-kss" customClass="PassportViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXC-5r-kde">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,11 +35,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fYF-IB-aUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="dGd-ke-n20">
-                    <connections>
-                        <action selector="tap:" destination="ZyZ-O2-kss" id="JnK-Ad-fbk"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="69" y="70"/>
         </scene>

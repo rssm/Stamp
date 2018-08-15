@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hnr-ik-Kcj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GQO-pK-Xj1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fdY-x8-JBY">
+            <objects>
+                <navigationController id="GQO-pK-Xj1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ig0-Jw-sd7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="relationship" relationship="rootViewController" id="guB-NJ-MAt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9N-F2-Bbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-777" y="99"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -17,6 +32,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arscnView>
+                    <navigationItem key="navigationItem" id="m7m-gv-Vsb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="aGY-94-5JJ">
+                            <connections>
+                                <segue destination="oMf-NR-HRg" kind="show" id="8sZ-ic-tQ3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
@@ -25,46 +47,13 @@
             </objects>
             <point key="canvasLocation" x="41" y="99"/>
         </scene>
-        <!--Passport View Controller-->
-        <scene sceneID="en5-f1-kfR">
+        <!--Passport-->
+        <scene sceneID="EbY-hc-8Ga">
             <objects>
-                <viewController id="Hnr-ik-Kcj" customClass="PassportViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4ls-Mh-MHe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vPV-4e-6Uc">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nnz-Ir-UpD" appends="YES" id="f1X-kR-55y"/>
-                                </connections>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="height" secondItem="4ls-Mh-MHe" secondAttribute="height" id="7bP-dC-jPE"/>
-                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="centerX" secondItem="a27-R8-A41" secondAttribute="centerX" id="asu-RS-En9"/>
-                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="centerY" secondItem="a27-R8-A41" secondAttribute="centerY" id="fgC-Uv-Jr5"/>
-                            <constraint firstItem="vPV-4e-6Uc" firstAttribute="width" secondItem="4ls-Mh-MHe" secondAttribute="width" id="tiW-bj-umE"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="a27-R8-A41"/>
-                    </view>
-                    <connections>
-                        <outlet property="backgroundPageImageView" destination="vPV-4e-6Uc" id="HNY-q8-NV2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RDI-bh-hcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="nnz-Ir-UpD">
-                    <connections>
-                        <action selector="tap:" destination="Hnr-ik-Kcj" id="Dbk-sZ-nGy"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <viewControllerPlaceholder storyboardIdentifier="passport" storyboardName="Passport" id="oMf-NR-HRg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfL-sX-Al2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="99"/>
+            <point key="canvasLocation" x="841" y="98"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="background" width="308" height="428"/>
-    </resources>
 </document>

@@ -24,8 +24,6 @@ class PassportViewController: UIViewController {
 //    imagem de fundo estilo passaporte
     @IBOutlet weak var backgroundPageImageView: UIImageView!
     
-//    ainda nao sei... hahaha
-//    adicionar os caras aí e remover quando der um novo clique. SHOWZERA
     var stampViews = [UIView]()
     
     var enableStampBool : Bool = false
@@ -68,9 +66,9 @@ class PassportViewController: UIViewController {
                 let position = touch.location(in: self.view)
                 
 //                preenche os dados do carimbo
+                let data = StampData(city: self.city, country: self.country, date: self.stringDate!, centerX: Double(position.x) , centerY: Double(position.y))
                 let stampView = StampView()
-                stampView.center = position
-                stampView.setLabelTexts(city: self.city, country: self.country, date: self.stringDate!)
+                stampView.setData(data: data)
                 
 //                verifica se não esta reposicionando.
                 if !self.firstStampBool{

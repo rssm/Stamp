@@ -42,9 +42,10 @@ class StampView : UIView {
     }
     
 //    recebe os dados a serem preenchidos nas labels
-    func setLabelTexts(city:String, country:String, date:String){
-        self.cityLabel.text = city
-        self.dataLabel.text = date
-        self.countryLabel.text = country
+    func setData(data : StampData){
+        self.cityLabel.text = data.city
+        self.dataLabel.text = data.date
+        self.countryLabel.text = data.country
+        self.center = CGPoint(x: data.centerX!, y: data.centerY!)
     }
 }

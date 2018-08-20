@@ -25,12 +25,14 @@ class PassportViewController: UIViewController {
     @IBOutlet weak var backgroundPageImageView: UIImageView!
     
     var stampViews = [UIView]()
+    var stampDatas = [StampData]()
     
     var enableStampBool : Bool = false
     var firstStampBool : Bool = true
     
     var addButtonItem : UIBarButtonItem?
     var doneButtonItem: UIBarButtonItem?
+    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +45,21 @@ class PassportViewController: UIViewController {
         
         let date = Date()
         let formater = DateFormatter()
+        
+//        recupera carimbos do user default e os coloca na tela.
+        
+        if let dataRetrieved = userDefaults.data(forKey: "Stamps"){
+            
+            let stampArray = try! NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, StampData.self], from: dataRetrieved) as! [StampData]
+            
+            self.stampDatas = stampArray
+            
+            for stamp in stampArray{
+                let sView = StampView()
+                sView.setData(data: stamp)
+                self.view.addSubview(sView)
+            }
+        }
         
         formater.dateFormat = "dd/MM/yyyy"
         
@@ -73,11 +90,17 @@ class PassportViewController: UIViewController {
 //                verifica se não esta reposicionando.
                 if !self.firstStampBool{
                     self.stampViews.popLast()?.removeFromSuperview()
+                    _ = self.stampDatas.popLast()
                 }
 //                adiciona o carimbo a tela.
                 self.stampViews.append(stampView)
+                self.stampDatas.append(data)
                 self.view.addSubview(stampView)
                 self.firstStampBool = false
+                
+                let encodedData: Data = try! NSKeyedArchiver.archivedData(withRootObject: self.stampDatas as Array, requiringSecureCoding: false)
+                userDefaults.set(encodedData, forKey: "Stamps")
+                userDefaults.synchronize()
             }
         }
     }

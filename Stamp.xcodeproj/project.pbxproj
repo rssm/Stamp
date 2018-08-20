@@ -23,7 +23,6 @@
 		6475A54E212588A7009CBA3D /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6475A54D212588A7009CBA3D /* VirtualObjectARView.swift */; };
 		6475A5502125AC56009CBA3D /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6475A54F2125AC56009CBA3D /* VirtualObjectInteraction.swift */; };
 		6475A5522125AC97009CBA3D /* ThreshholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6475A5512125AC97009CBA3D /* ThreshholdPanGesture.swift */; };
-		64A71907212B07380078DD27 /* StampData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A71906212B07380078DD27 /* StampData.swift */; };
 		64D2B0262120734F00E6BC76 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2B0252120734F00E6BC76 /* RoundedButton.swift */; };
 		64D2B029212075AD00E6BC76 /* ARStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2B028212075AD00E6BC76 /* ARStamp.swift */; };
 		64D2B02D2121542E00E6BC76 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2B02B2121542E00E6BC76 /* FocusSquare.swift */; };
@@ -51,7 +50,6 @@
 		6475A54D212588A7009CBA3D /* VirtualObjectARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
 		6475A54F2125AC56009CBA3D /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
 		6475A5512125AC97009CBA3D /* ThreshholdPanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreshholdPanGesture.swift; sourceTree = "<group>"; };
-		64A71906212B07380078DD27 /* StampData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampData.swift; sourceTree = "<group>"; };
 		64D2B0252120734F00E6BC76 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		64D2B028212075AD00E6BC76 /* ARStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARStamp.swift; sourceTree = "<group>"; };
 		64D2B02B2121542E00E6BC76 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 		3FEDA7F8211B286F008F3C1E = {
 			isa = PBXGroup;
 			children = (
-				64A71906212B07380078DD27 /* StampData.swift */,
 				3FEDA803211B286F008F3C1E /* Stamp */,
 				3FEDA802211B286F008F3C1E /* Products */,
 				3F76E0E1212461B400F4E369 /* Frameworks */,
@@ -151,7 +148,6 @@
 		64A71905212B06850078DD27 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				3F76E0E521248AB800F4E369 /* StampData.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -170,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				64D2B028212075AD00E6BC76 /* ARStamp.swift */,
+				3F76E0E521248AB800F4E369 /* StampData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,7 +275,6 @@
 				64D2B0312121553600E6BC76 /* Utilities.swift in Sources */,
 				3FEDA805211B286F008F3C1E /* AppDelegate.swift in Sources */,
 				64D2B02E2121542E00E6BC76 /* FocusSquareSegment.swift in Sources */,
-				64A71907212B07380078DD27 /* StampData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,13 +420,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Stamp/Stamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P4UELCPGZV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tonisso.Stamp;
+				PRODUCT_BUNDLE_IDENTIFIER = bahr.company.Stamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,13 +439,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Stamp/Stamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P4UELCPGZV;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tonisso.Stamp;
+				PRODUCT_BUNDLE_IDENTIFIER = bahr.company.Stamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -70,6 +70,7 @@ class PassportViewController: UIViewController {
         
 //        setando delegate e precisão caso a localização seja autorizada.
         startLocationManager()
+        self.navigationController?.navigationBar.isUserInteractionEnabled = true
         
     }
     

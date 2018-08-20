@@ -100,11 +100,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         rectangle.lineWidth = 5
         rectangle.alpha = 0.4
         
-        let stamp = StampView(frame: CGRect(x: 100, y: 50, width: 200, height: 100))
+        let stamp = StampView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         stamp.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3018077099)
         stamp.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3018077099)
         stamp.contentView.backgroundColor = .clear
-        stamp.setLabelTexts(city: self.city, country: self.country, date: self.stringDate!)
+        let data = StampData(city: self.city, country: self.country, date: self.stringDate!, centerX: 200, centerY: 100)
+
+        stamp.setData(data: data)
         
 //        rectangle.inputView?.addSubview(stamp)
         

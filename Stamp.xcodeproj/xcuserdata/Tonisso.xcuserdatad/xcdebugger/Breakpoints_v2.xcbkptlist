@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Stamp/Controller/ViewController.swift"
+            timestampString = "556418536.355671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getWorldMap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Stamp.ViewController.getWorldMap(Any) -&gt; ()"
+                  moduleName = "Stamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tonisso/Works/BEPiD/Stamp/Stamp/Controller/ViewController.swift"
+                  timestampString = "556415971.544651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "940">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.ARWorldMap&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Stamp.ViewController.getWorldMap(Any) -&gt; ()"
+                  moduleName = "Stamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tonisso/Works/BEPiD/Stamp/Stamp/Controller/ViewController.swift"
+                  timestampString = "556415971.546865"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

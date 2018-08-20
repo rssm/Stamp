@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GQO-pK-Xj1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GQO-pK-Xj1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,19 +29,63 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                    <view key="view" contentMode="scaleToFill" id="Plf-uP-Lvy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
-                    <navigationItem key="navigationItem" id="m7m-gv-Vsb">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="aGY-94-5JJ">
-                            <connections>
-                                <segue destination="oMf-NR-HRg" kind="show" id="8sZ-ic-tQ3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4t-Av-TaJ" customClass="VirtualObjectARView" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-BJ-wro" customClass="RoundedButton" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="164.5" y="601" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ENg-dG-KbX"/>
+                                    <constraint firstAttribute="height" constant="46" id="cUT-JD-84y"/>
+                                </constraints>
+                                <state key="normal" image="icons8-mais-50"/>
+                                <connections>
+                                    <action selector="addObj:" destination="BV1-FR-VrT" eventType="touchUpInside" id="hfx-oh-N29"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IF1-gp-Nzt" customClass="RoundedButton" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="313" y="601" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="1PJ-ic-Xpy"/>
+                                    <constraint firstAttribute="height" constant="46" id="qof-yO-ZVC"/>
+                                </constraints>
+                                <state key="normal" image="icons8-passaporte-50.png"/>
+                                <connections>
+                                    <segue destination="oMf-NR-HRg" kind="show" id="MUC-yf-b9z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-ab-rMg" customClass="RoundedButton" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="601" width="46" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="uGb-S3-XVV"/>
+                                    <constraint firstAttribute="height" constant="46" id="uH7-8O-592"/>
+                                </constraints>
+                                <state key="normal" image="icons8-captura-de-tela-50"/>
+                                <connections>
+                                    <action selector="getWorldMap:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ifp-Jc-mvL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zZN-AS-EK5" firstAttribute="bottom" secondItem="vqK-BJ-wro" secondAttribute="bottom" constant="20" id="AzG-kP-TZj"/>
+                            <constraint firstItem="zZN-AS-EK5" firstAttribute="bottom" secondItem="pGw-ab-rMg" secondAttribute="bottom" constant="20" id="CeQ-vS-gW0"/>
+                            <constraint firstItem="pGw-ab-rMg" firstAttribute="leading" secondItem="zZN-AS-EK5" secondAttribute="leading" constant="16" id="Xwx-ih-LoQ"/>
+                            <constraint firstItem="vqK-BJ-wro" firstAttribute="centerX" secondItem="zZN-AS-EK5" secondAttribute="centerX" id="epI-dL-ht5"/>
+                            <constraint firstItem="zZN-AS-EK5" firstAttribute="bottom" secondItem="IF1-gp-Nzt" secondAttribute="bottom" constant="20" id="fyq-JJ-RfC"/>
+                            <constraint firstItem="zZN-AS-EK5" firstAttribute="trailing" secondItem="IF1-gp-Nzt" secondAttribute="trailing" constant="16" id="rz4-5Q-4z2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zZN-AS-EK5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h6H-gU-l4p"/>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="addObjectButton" destination="vqK-BJ-wro" id="GH8-ns-hYN"/>
+                        <outlet property="sceneView" destination="b4t-Av-TaJ" id="iSA-aC-XIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
@@ -56,4 +101,9 @@
             <point key="canvasLocation" x="841" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-captura-de-tela-50" width="37.5" height="37.5"/>
+        <image name="icons8-mais-50" width="37.5" height="37.5"/>
+        <image name="icons8-passaporte-50.png" width="50" height="50"/>
+    </resources>
 </document>

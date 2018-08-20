@@ -71,8 +71,6 @@ class PassportViewController: UIViewController {
 //        setando delegate e precisão caso a localização seja autorizada.
         startLocationManager()
         
-//        adicionar aleta para caso o usuário recuse localização
-        
     }
     
 
@@ -106,6 +104,8 @@ class PassportViewController: UIViewController {
     }
 
 }
+
+
 
 extension PassportViewController : CLLocationManagerDelegate{
     
@@ -147,7 +147,7 @@ extension PassportViewController : CLLocationManagerDelegate{
         self.firstStampBool = true
     }
     
-    //    desativa a atualização da localização, desautoriza carimbar, muda o buttonItem e faz a lógica do carimbo.
+//    desativa a atualização da localização, desautoriza carimbar, muda o buttonItem e faz a lógica do carimbo.
     @objc func desenableStamp(){
         self.stopLocationManager()
         self.enableStampBool = !self.enableStampBool
